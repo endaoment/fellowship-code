@@ -36,27 +36,37 @@ cd fellowship
 
 ### Step 2: Calibrate the Team
 
-Type `/setup-fellowship` in Cursor. Gandalf walks you through a guided conversation — asking about your repos, tech stack, git workflow, project management, and team conventions. No forms to fill out, just answer the questions:
+Type `/setup-fellowship` in Cursor. Gandalf explores your codebase first — reading package.json files, READMEs, config files, CI pipelines, and directory structure to auto-detect your tech stack, commands, and conventions. Then he presents what he found and only asks follow-up questions about what he couldn't figure out on his own:
 
 ```text
 /setup-fellowship
 ```
 
-Gandalf will ask things like:
+You can also point Gandalf at a specific directory:
 
-> *What's the project called? What repos will the Fellowship work in?
-> What are the key commands? What's your branch naming convention?*
+```text
+/setup-fellowship ~/Code/my-project
+```
 
-Answer as much or as little as you want. Skip anything that doesn't apply. When Gandalf has enough, he'll:
+Gandalf will come back with something like:
 
-- Generate your `CLAUDE.md` (the project bible every agent reads)
-- Customize each agent's Domain Knowledge for your stack
-- Update the roster with correct repo assignments
-- Set your branch naming and PR conventions
+> *I've explored your codebase. Here's what I found:*
+> *backend/ — Django 5.0, DRF, PostgreSQL. Commands: manage.py runserver, test, ruff.*
+> *frontend/ — Next.js 14, React, Tailwind. Commands: npm run dev, test, lint.*
+> *CI via GitHub Actions. Default branch: main.*
+>
+> *Here's what I couldn't determine: What's your branch naming convention? What PM tool do you use? Any areas I should never auto-modify?*
+
+Answer the follow-ups, and Gandalf calibrates:
+
+- Generates your `CLAUDE.md` (the project bible every agent reads)
+- Customizes each agent's Domain Knowledge for your stack
+- Updates the roster with correct repo assignments
+- Sets your branch naming and PR conventions
 
 **That's it. The Fellowship knows your project now.**
 
-> **Prefer to skip the conversation?** You can also dump everything in a single message after `/setup-fellowship` and Gandalf will parse it directly. See `SETUP_QUESTIONNAIRE.md` for the full list of what he wants to know.
+> **Want to skip the exploration?** You can also dump all your project info in a single message after `/setup-fellowship` and Gandalf will parse it directly. See `SETUP_QUESTIONNAIRE.md` for the full list of what he looks for.
 
 ### Step 3: Try It
 
@@ -174,7 +184,7 @@ can configure email and push notification settings per category.
 
 ### The Easy Way: `/setup-fellowship`
 
-Type `/setup-fellowship` and Gandalf walks you through a guided conversation. He asks the questions, you answer, and he calibrates the entire team. This is the recommended path — it updates every agent, generates your CLAUDE.md, and sets all conventions at once. See [Quick Start](#quick-start) above.
+Type `/setup-fellowship` and Gandalf explores your codebase, auto-detects your stack, and only asks about what he can't figure out. This is the recommended path — it updates every agent, generates your CLAUDE.md, and sets all conventions at once. See [Quick Start](#quick-start) above.
 
 ### Manual Customization
 

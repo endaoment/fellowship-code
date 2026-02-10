@@ -1,48 +1,42 @@
-# Fellowship Setup — What Gandalf Will Ask
+# Fellowship Setup — What Gandalf Looks For
 
 > **You don't need to fill this out.** Just type `/setup-fellowship` in Cursor
-> and Gandalf will walk you through these questions in a conversation.
+> and Gandalf will explore your codebase to auto-detect most of this. He'll only
+> ask you about what he can't figure out on his own.
 >
-> This file exists as a reference so you can think about your answers ahead of
-> time, or so you can paste everything at once if you prefer speed over conversation.
+> This file exists as a reference so you know what Gandalf is looking for, or so
+> you can paste everything at once if you prefer speed over exploration.
 
 ---
 
-## What Gandalf Wants to Know
+## What Gandalf Auto-Detects
 
-### 1. The Project
-- What's the project called?
-- One-line description of what it does
-- What repos will the Fellowship work in? (directory name, purpose, tech stack for each)
+Gandalf reads your codebase before asking anything. He looks at:
 
-### 2. Commands & Workflow
-- Key commands per repo (dev, build, test, lint, migrate)
-- Default branch (main, develop, etc.)
-- Feature branch naming format
-- PR title format
-- Merge strategy (squash, merge commits, rebase)
+- **`package.json`**, **`pyproject.toml`**, **`go.mod`**, **`Cargo.toml`**, etc. → tech stacks and dependencies
+- **`README.md`** files → project name, description, setup instructions
+- **Top-level directories** → repo/app/package structure
+- **`scripts` in package.json**, **`Makefile`**, **`Taskfile`** → dev, build, test, lint commands
+- **`.github/`**, **`.circleci/`**, **`.gitlab-ci.yml`** → CI/CD platform
+- **`docker-compose.yml`**, **`prisma/`**, **ORM configs** → database and infrastructure
+- **Auth libraries in dependencies** → authentication approach
+- **`CODEOWNERS`**, **PR templates** → review conventions
+- **Solidity files**, **ML deps**, **mobile frameworks** → specialist domain for Pippin
 
-### 3. Architecture & Tools
-- Project management tool (GitHub Issues, Jira, Linear, Notion, or none)
-  - Issue ID format and status flow if applicable
-- Auth approach (JWT, sessions, OAuth2, etc.)
-- API style (REST, GraphQL, tRPC)
-- Key conventions ("money in cents", "feature flags via X", etc.)
+## What Gandalf Usually Has to Ask
 
-### 4. Infra & Specialist Domain
-- CI/CD platform (GitHub Actions, CircleCI, etc.)
-- Cloud provider (AWS, GCP, Azure, Vercel)
-- Environments (dev → staging → production)
-- Specialized domain for Pippin? (smart contracts, ML, mobile, data engineering, or none)
-  - If yes: tools, frameworks, and special considerations
+These are hard to detect from code alone:
 
-### 5. Team Preferences (optional)
-- Code review requirements (approvals needed)
-- Sensitive areas the Fellowship should never auto-modify
-- Anything else
-
----
+- **Feature branch naming convention** (e.g., `feature/PROJ-123-description`)
+- **PR title format** (e.g., `[PROJ-123] Description`)
+- **Merge strategy** (squash, merge commits, rebase)
+- **Project management tool** and issue ID format (unless templates exist)
+- **Issue status flow** (To Do → In Progress → Done, etc.)
+- **Code review requirements** (number of approvals needed)
+- **Sensitive areas** the Fellowship should never auto-modify
+- **Deployment environments** and promotion flow (dev → staging → prod)
+- **Team-specific conventions** not captured in config files
 
 ## Shortcut: Paste Everything at Once
 
-If you'd rather skip the conversation and give Gandalf everything up front, just paste your answers in a single message after `/setup-fellowship`. Gandalf will parse them and go straight to calibration. Free-form is fine — no special format required.
+If you'd rather skip the exploration and give Gandalf everything up front, paste your answers in a single message after `/setup-fellowship`. Free-form is fine — no special format required. Gandalf will parse it and go straight to calibration.
