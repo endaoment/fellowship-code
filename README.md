@@ -119,7 +119,7 @@ To remove:
 ./uninstall.sh
 ```
 
-## The Fellowship of the Ring
+## The Fellowship of the Code
 
 | Member      | `subagent_type`             | Role                     | Personality                                         |
 | ----------- | --------------------------- | ------------------------ | --------------------------------------------------- |
