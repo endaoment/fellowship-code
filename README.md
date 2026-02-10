@@ -36,69 +36,27 @@ cd fellowship
 
 ### Step 2: Calibrate the Team
 
-Open `SETUP_QUESTIONNAIRE.md`, fill in your answers, and paste the whole thing into Cursor. Gandalf reads your answers and customizes every agent to your project in one shot:
+Type `/setup-fellowship` in Cursor. Gandalf walks you through a guided conversation — asking about your repos, tech stack, git workflow, project management, and team conventions. No forms to fill out, just answer the questions:
 
 ```text
 /setup-fellowship
-
-## My Project
-**Project name**: Acme Platform
-**One-line description**: B2B SaaS for invoice automation
-
-## Repositories
-| Directory | Purpose    | Tech Stack                          |
-| --------- | ---------- | ----------------------------------- |
-| backend   | API server | Django 5.0, DRF, PostgreSQL         |
-| frontend  | Web app    | Next.js 14, React 19, Tailwind      |
-| infra     | IaC        | Terraform, AWS                      |
-
-## Commands
-**backend**:
-- Dev: python manage.py runserver
-- Test: python manage.py test
-- Lint: ruff check .
-
-**frontend**:
-- Dev: npm run dev
-- Test: npm run test
-- Lint: npm run lint
-
-## Git Workflow
-- Default branch: main
-- Feature branch format: feature/PROJ-123-description
-- PR title format: [PROJ-123] Description
-
-## Project Management
-- Tool: Linear
-- Issue ID format: PROJ-123
-- Status flow: To Do → In Progress → In Review → Done
-
-## Architecture Highlights
-- Auth: JWT via Auth0
-- Database: PostgreSQL with Prisma
-- API style: REST
-- Key conventions: All money in cents (integers)
-
-## Domain Specialist (Pippin)
-- Domain: none
-
-## CI/CD & Infrastructure
-- CI: GitHub Actions
-- Cloud: AWS
-- Deploy: Terraform + ECS
-
-## Team Conventions
-- Review: 1 approval required
-- Sensitive: Never auto-modify migrations
 ```
 
-Gandalf will:
+Gandalf will ask things like:
+
+> *What's the project called? What repos will the Fellowship work in?
+> What are the key commands? What's your branch naming convention?*
+
+Answer as much or as little as you want. Skip anything that doesn't apply. When Gandalf has enough, he'll:
+
 - Generate your `CLAUDE.md` (the project bible every agent reads)
 - Customize each agent's Domain Knowledge for your stack
 - Update the roster with correct repo assignments
 - Set your branch naming and PR conventions
 
 **That's it. The Fellowship knows your project now.**
+
+> **Prefer to skip the conversation?** You can also dump everything in a single message after `/setup-fellowship` and Gandalf will parse it directly. See `SETUP_QUESTIONNAIRE.md` for the full list of what he wants to know.
 
 ### Step 3: Try It
 
@@ -216,7 +174,7 @@ can configure email and push notification settings per category.
 
 ### The Easy Way: `/setup-fellowship`
 
-Fill out `SETUP_QUESTIONNAIRE.md` and paste it into Cursor. Gandalf calibrates the entire team in one prompt. This is the recommended path -- it updates every agent, generates your CLAUDE.md, and sets all conventions at once. See [Quick Start](#quick-start) above.
+Type `/setup-fellowship` and Gandalf walks you through a guided conversation. He asks the questions, you answer, and he calibrates the entire team. This is the recommended path — it updates every agent, generates your CLAUDE.md, and sets all conventions at once. See [Quick Start](#quick-start) above.
 
 ### Manual Customization
 
@@ -258,7 +216,7 @@ From the [Cursor research](https://cursor.com/blog/self-driving-codebases) and o
 ```
 fellowship-code/
 ├── README.md                  # You are here
-├── SETUP_QUESTIONNAIRE.md     # Fill this out, paste to Gandalf
+├── SETUP_QUESTIONNAIRE.md     # Reference: what Gandalf will ask
 ├── setup.sh                   # Install the Fellowship
 ├── uninstall.sh               # Clean removal
 ├── LICENSE                    # MIT
