@@ -1,8 +1,8 @@
-# Fellowship Code
+# The Fellowship of the Code
 
 > **It fellowships your code.** Get it?
 
-An open-source multi-agent AI engineering team for [Cursor](https://cursor.com), built on [Cursor's self-driving codebases research](https://cursor.com/blog/self-driving-codebases). Each agent is a character from Tolkien's Fellowship, with a clear role, personality, and domain expertise -- all working together to take your codebase from idea to production.
+An open-source multi-agent AI engineering team for [Cursor](https://cursor.com), built on [Cursor's self-driving codebases research](https://cursor.com/blog/self-driving-codebases). Each agent is a character from Tolkien's Fellowship of the Ring, with a clear role, personality, and domain expertise -- all working together to take your codebase from idea to production.
 
 You describe the quest. Gandalf assembles the team. The Fellowship gets it done.
 
@@ -20,8 +20,6 @@ Fellowship Code is a **plug-and-play multi-agent system** for AI-assisted softwa
 - **Deploy** to production
 
 Each agent has a distinct personality, hard constraints, and graceful degradation -- so they know what to do when things go right *and* when things go wrong.
-
-**Built by [Endaoment](https://endaoment.org)**, the first community foundation built on crypto rails. We use the Fellowship daily to build our platform. Now we're sharing it with the world.
 
 ## Quick Start
 
@@ -121,7 +119,7 @@ To remove:
 ./uninstall.sh
 ```
 
-## The Fellowship
+## The Fellowship of the Ring
 
 | Member      | `subagent_type`             | Role                     | Personality                                         |
 | ----------- | --------------------------- | ------------------------ | --------------------------------------------------- |
@@ -311,11 +309,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome new agents, improved phase co
 
 ## Credits
 
-Built by the engineering team at [Endaoment](https://endaoment.org), who use the Fellowship daily to build a community foundation on crypto rails.
-
 Inspired by:
 - [Cursor's self-driving codebases](https://cursor.com/blog/self-driving-codebases) research
-- J.R.R. Tolkien, obviously
+- J.R.R. Tolkien's *The Lord of the Rings*, obviously
 - Every engineering team that wishes they had 10 tireless colleagues
 
 ## License
@@ -324,4 +320,4 @@ MIT -- see [LICENSE](LICENSE).
 
 ---
 
-*One does not simply ship code without the Fellowship.*
+*One does not simply ship code without the Fellowship of the Ring.*
