@@ -24,15 +24,18 @@ Before asking a single question, **explore the project directory** to auto-detec
 Explore systematically. Use file listing, glob patterns, and read key files:
 
 **1. Project identity**
+
 - Read `README.md`, `package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`, or similar root manifests
 - Infer project name and description
 
 **2. Repository structure**
+
 - List top-level directories to identify repos/apps/packages
 - Look for monorepo signals: `nx.json`, `turbo.json`, `pnpm-workspace.yaml`, `lerna.json`, Cargo workspace, etc.
 - For each directory that looks like a distinct project: identify its purpose from its README, manifest, or directory name
 
 **3. Tech stacks per repo**
+
 - Read `package.json` (deps reveal framework: next, react, vue, express, nestjs, etc.)
 - Read `requirements.txt`, `pyproject.toml`, `Pipfile` (Django, Flask, FastAPI, etc.)
 - Read `Gemfile` (Rails), `go.mod` (Go), `Cargo.toml` (Rust), `build.gradle` (Java/Kotlin)
@@ -40,23 +43,27 @@ Explore systematically. Use file listing, glob patterns, and read key files:
 - Check for database: `docker-compose.yml`, `prisma/schema.prisma`, `ormconfig`, `alembic.ini`, TypeORM config
 
 **4. Commands**
+
 - Read `package.json` scripts sections
 - Read `Makefile` targets
 - Read `Taskfile.yml`, `justfile`, `Procfile`
 - Look for `scripts/` directory
 
 **5. Git workflow**
+
 - Check `git branch` or `.git/HEAD` for default branch
 - Look for `.github/` (GitHub Actions), `.circleci/`, `.gitlab-ci.yml`, `Jenkinsfile`
 - Read `CODEOWNERS` if present
 - Check for branch protection patterns in CI config
 
 **6. Project management**
+
 - Look for `.github/ISSUE_TEMPLATE/` (GitHub Issues)
 - Look for `.linear/`, `jira.config`, or issue ID patterns in commit history
 - Check PR templates: `.github/pull_request_template.md`
 
 **7. Architecture clues**
+
 - Auth: look for `auth/`, `middleware/auth`, JWT libraries in deps, OAuth config
 - API style: look for GraphQL deps (`apollo`, `graphql`), tRPC, or REST patterns (controllers, routes)
 - State management: look for redux, zustand, jotai, pinia, vuex in frontend deps
@@ -64,6 +71,7 @@ Explore systematically. Use file listing, glob patterns, and read key files:
 - CI/CD config files reveal cloud provider and deployment methods
 
 **8. Specialist domain**
+
 - Solidity files, Foundry/Hardhat config → smart contracts
 - ML/AI deps (pytorch, tensorflow, scikit-learn, mlflow) → ML pipelines
 - React Native, Flutter, Expo → mobile

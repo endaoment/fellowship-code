@@ -2,7 +2,7 @@
 
 > **It fellow*ships*&nbsp;your code.** Get it?
 
-An open-source multi-agent AI engineering team for [Cursor](https://cursor.com), built on [Cursor's self-driving codebases research](https://cursor.com/blog/self-driving-codebases). Each agent is a character from Tolkien's Fellowship of the Ring, with a clear role, personality, and domain expertise -- all working together to take your codebase from idea to production.
+An open-source multi-agent AI engineering team for [Cursor](https://cursor.com) and [Claude Code](https://docs.anthropic.com/en/docs/claude-code), built on learnings from [Cursor's self-driving codebases research](https://cursor.com/blog/self-driving-codebases). Each agent is a character from Tolkien's Fellowship of the Ring, with a clear role, personality, and domain expertise -- all working together to take your codebase from idea to production.
 
 You describe the quest. Gandalf assembles the team. The Fellowship gets it done.
 
@@ -29,14 +29,14 @@ Each agent has a distinct personality, hard constraints, and graceful degradatio
 # Clone into your project root (or config directory)
 git clone https://github.com/endaoment/fellowship-code.git fellowship
 
-# Install -- creates symlinks into your claude/ directory
+# Install — creates symlinks into your .claude/ directory
 cd fellowship
 ./setup.sh
 ```
 
 ### Step 2: Calibrate the Team
 
-Type `/setup-fellowship` in Cursor. Gandalf explores your codebase first — reading package.json files, READMEs, config files, CI pipelines, and directory structure to auto-detect your tech stack, commands, and conventions. Then he presents what he found and only asks follow-up questions about what he couldn't figure out on his own:
+Type `/setup-fellowship` in your editor. Gandalf explores your codebase first — reading package.json files, READMEs, config files, CI pipelines, and directory structure to auto-detect your tech stack, commands, and conventions. Then he presents what he found and only asks follow-up questions about what he couldn't figure out on his own:
 
 ```text
 /setup-fellowship
@@ -218,7 +218,7 @@ From the [Cursor research](https://cursor.com/blog/self-driving-codebases) and o
 3. **Intent over checklist** -- describe the destination, not every step of the path.
 4. **Dedicated identity** -- each member knows who they are before you send them.
 5. **Concrete quantifiers** -- "3-15 issues" not "many issues"; "3-4 members" not "several."
-6. **Smart prioritization** -- 3-4 highest-impact tasks per wave (Cursor limit: 4 concurrent).
+6. **Smart prioritization** -- 3-4 highest-impact tasks per wave (max 4 concurrent subagents).
 7. **Accept turbulence** -- members may step on each other's work briefly; Gandalf resolves it.
 
 ## Project Structure
@@ -265,10 +265,23 @@ fellowship-code/
     └── example-claude-md.md
 ```
 
-## Requirements
+## Compatibility
 
-- [Cursor IDE](https://cursor.com) with agent/subagent support
-- A `claude/` or `.claude/` directory in your project for agent configuration
+Fellowship Code works with any AI coding tool that supports the `.claude/` directory convention:
+
+| Tool                                                          | Support                                    |
+| ------------------------------------------------------------- | ------------------------------------------ |
+| [Cursor](https://cursor.com)                                  | Full support — agents, skills, rules, docs |
+| [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Full support — agents, skills, rules, docs |
+
+### Why `.claude/` instead of `.cursor/`?
+
+The Fellowship installs into `.claude/` (not `.cursor/`) because the `.claude/` directory is the **cross-compatible standard** for AI agent configuration. Both Cursor and Claude Code read from `.claude/`, so installing there means your Fellowship works in either tool without changes. Cursor also reads `.cursor/`, but Claude Code does not — so `.claude/` is the universal choice.
+
+### Requirements
+
+- An AI coding tool with subagent support (Cursor or Claude Code)
+- A `.claude/` directory in your project for agent configuration
 - That's it. No dependencies, no build step, no runtime.
 
 ## Contributing
@@ -289,4 +302,4 @@ MIT -- see [LICENSE](LICENSE).
 
 ---
 
-_One does not simply ship code without the Fellowship of the Code._
+_One does not simply ship quality code without the Fellowship of the Code._

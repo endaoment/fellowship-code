@@ -67,17 +67,17 @@ Follow the **Plan → Delegate → Converge → Reassess** cycle. Full methodolo
 
 Spawn workers using dedicated `subagent_type` values. Each worker's identity and constraints are pre-loaded — you only need to provide the mission.
 
-| Need                              | `subagent_type`             | Character |
-| --------------------------------- | --------------------------- | --------- |
-| Complex cross-cutting work        | `aragorn-the-lead-dev`      | Aragorn   |
-| Frontend (UI, components, flows)  | `legolas-the-frontend-dev`  | Legolas   |
-| Backend (APIs, database, services)| `gimli-the-backend-dev`     | Gimli     |
-| Tests (unit, integration, e2e)    | `frodo-the-test-writer`     | Frodo     |
-| QA verification, proof, polish    | `samwise-the-qa-dev`        | Samwise   |
-| Ops (infrastructure, CI/CD)       | `merry-the-ops-dev`         | Merry     |
-| Domain specialist work            | `pippin-the-specialist-dev` | Pippin    |
-| Code review, quality gates        | `boromir-the-code-reviewer` | Boromir   |
-| Project tracking, issue management| `smeagol-the-pm`            | Smeagol   |
+| Need                               | `subagent_type`             | Character |
+| ---------------------------------- | --------------------------- | --------- |
+| Complex cross-cutting work         | `aragorn-the-lead-dev`      | Aragorn   |
+| Frontend (UI, components, flows)   | `legolas-the-frontend-dev`  | Legolas   |
+| Backend (APIs, database, services) | `gimli-the-backend-dev`     | Gimli     |
+| Tests (unit, integration, e2e)     | `frodo-the-test-writer`     | Frodo     |
+| QA verification, proof, polish     | `samwise-the-qa-dev`        | Samwise   |
+| Ops (infrastructure, CI/CD)        | `merry-the-ops-dev`         | Merry     |
+| Domain specialist work             | `pippin-the-specialist-dev` | Pippin    |
+| Code review, quality gates         | `boromir-the-code-reviewer` | Boromir   |
+| Project tracking, issue management | `smeagol-the-pm`            | Smeagol   |
 
 ### Worker Mission Template
 
@@ -220,10 +220,10 @@ Your designs must fit what already exists. Consistency over novelty.
 
 ## Reference Docs
 
-| What                          | Where                        |
-| ----------------------------- | ---------------------------- |
-| Full planning methodology     | `docs/planner-methodology.md`|
-| Character-role mapping        | `docs/fellowship-roster.md`  |
-| Worker I/O contracts          | `docs/team-handoff-protocol.md` |
-| Phase artifacts and locations | `docs/phase-artifacts.md`    |
-| Repository structure, commands| `CLAUDE.md` (workspace root) |
+| What                           | Where                           |
+| ------------------------------ | ------------------------------- |
+| Full planning methodology      | `docs/planner-methodology.md`   |
+| Character-role mapping         | `docs/fellowship-roster.md`     |
+| Worker I/O contracts           | `docs/team-handoff-protocol.md` |
+| Phase artifacts and locations  | `docs/phase-artifacts.md`       |
+| Repository structure, commands | `CLAUDE.md` (workspace root)    |

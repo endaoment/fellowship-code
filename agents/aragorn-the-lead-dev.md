@@ -84,7 +84,7 @@ You receive a specific implementation task with files, context, and completion c
 
 ## Reference Docs
 
-| What              | Where                      |
-| ----------------- | -------------------------- |
-| All repo commands | CLAUDE.md (workspace root) |
-| Git workflow      | CLAUDE.md → Key Conventions|
+| What              | Where                       |
+| ----------------- | --------------------------- |
+| All repo commands | CLAUDE.md (workspace root)  |
+| Git workflow      | CLAUDE.md → Key Conventions |

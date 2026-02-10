@@ -25,12 +25,12 @@ Take PR URLs and ensure each one is: functionally verified with proof attached, 
 
 ## Workers
 
-| Worker         | `subagent_type`                                                           | Mission                                             |
-| -------------- | ------------------------------------------------------------------------- | --------------------------------------------------- |
-| Samwise        | `samwise-the-qa-dev`                                                      | Verify functionality, attach proof, fix lint errors |
-| Frodo          | `frodo-the-test-writer`                                                   | Fill test coverage gaps found during QA             |
-| Boromir        | `boromir-the-code-reviewer`                                               | Review code quality, flag issues                    |
-| Domain workers | (per issue: `legolas-the-frontend-dev`, `gimli-the-backend-dev`, etc.)    | Fix functionality or code quality issues found      |
+| Worker         | `subagent_type`                                                        | Mission                                             |
+| -------------- | ---------------------------------------------------------------------- | --------------------------------------------------- |
+| Samwise        | `samwise-the-qa-dev`                                                   | Verify functionality, attach proof, fix lint errors |
+| Frodo          | `frodo-the-test-writer`                                                | Fill test coverage gaps found during QA             |
+| Boromir        | `boromir-the-code-reviewer`                                            | Review code quality, flag issues                    |
+| Domain workers | (per issue: `legolas-the-frontend-dev`, `gimli-the-backend-dev`, etc.) | Fix functionality or code quality issues found      |
 
 ## Done Criteria
 

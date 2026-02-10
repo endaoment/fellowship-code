@@ -21,10 +21,10 @@ This phase handles the full release lifecycle: release candidate PRs, CI monitor
 
 ## Workers
 
-| Worker  | `subagent_type`    | Mission                               |
-| ------- | ------------------ | ------------------------------------- |
-| Gandalf | (orchestrator)     | Coordinate the release                |
-| Smeagol | `smeagol-the-pm`  | QA issue creation and tracking        |
+| Worker  | `subagent_type`  | Mission                        |
+| ------- | ---------------- | ------------------------------ |
+| Gandalf | (orchestrator)   | Coordinate the release         |
+| Smeagol | `smeagol-the-pm` | QA issue creation and tracking |
 
 > **Tip**: If your project has a dedicated release-manager agent, add it here as the primary worker and make this phase a thin wrapper.
 

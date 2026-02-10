@@ -6,13 +6,13 @@ What each Fellowship phase produces, where artifacts live, and how phases connec
 
 ## Artifact Map
 
-| Phase       | Command               | Primary Artifacts                           | Location                        |
-| ----------- | --------------------- | ------------------------------------------- | ------------------------------- |
-| Spec & Plan | `/spec-and-plan`      | Technical spec, tracking issues, Spec PR    | Specs directory, issue tracker  |
-| Build       | `/build-full-stack`   | Code PRs (per repo), updated issues         | Target repo branches, GitHub PRs|
-| QA & Polish | `/qa-and-polish`      | Proof comments, clean PRs, CI green         | GitHub PR comments              |
-| Code Review | `/code-review`        | Review comments, addressed feedback         | GitHub PR comments              |
-| Deploy      | `/deploy-and-release` | RC PRs, release notes, deployment artifacts | GitHub, issue tracker           |
+| Phase       | Command               | Primary Artifacts                           | Location                         |
+| ----------- | --------------------- | ------------------------------------------- | -------------------------------- |
+| Spec & Plan | `/spec-and-plan`      | Technical spec, tracking issues, Spec PR    | Specs directory, issue tracker   |
+| Build       | `/build-full-stack`   | Code PRs (per repo), updated issues         | Target repo branches, GitHub PRs |
+| QA & Polish | `/qa-and-polish`      | Proof comments, clean PRs, CI green         | GitHub PR comments               |
+| Code Review | `/code-review`        | Review comments, addressed feedback         | GitHub PR comments               |
+| Deploy      | `/deploy-and-release` | RC PRs, release notes, deployment artifacts | GitHub, issue tracker            |
 
 ---
 
@@ -67,12 +67,12 @@ Only create files for affected areas. Skip `specialist.md` if no domain-specific
 
 ## Tracking Artifacts
 
-| Phase       | Tracking Action                                               |
-| ----------- | ------------------------------------------------------------- |
-| Spec & Plan | Create issues (linked to spec, assigned, in current milestone)|
-| Build       | Transition issues: NEW → In progress → Review Ready           |
-| QA & Polish | Mark review-ready, notify reviewers                           |
-| Deploy      | Create QA issue for RC, update on completion                  |
+| Phase       | Tracking Action                                                |
+| ----------- | -------------------------------------------------------------- |
+| Spec & Plan | Create issues (linked to spec, assigned, in current milestone) |
+| Build       | Transition issues: NEW → In progress → Review Ready            |
+| QA & Polish | Mark review-ready, notify reviewers                            |
+| Deploy      | Create QA issue for RC, update on completion                   |
 
 ## Scratchpad Artifacts
 
@@ -80,10 +80,10 @@ During execution, Gandalf maintains `{feature}-scratchpad.md` in the working dir
 
 ## PR Conventions
 
-| Field       | Format                                           |
-| ----------- | ------------------------------------------------ |
-| Branch      | `feature/XXXX-short-description`                 |
-| Title       | `[XXXX] Description`                             |
-| Body        | Links to tracking issues, summary of changes     |
-| Reviewers   | Code owners for the affected repo                |
-| Base branch | Your project's default branch (main or develop)  |
+| Field       | Format                                          |
+| ----------- | ----------------------------------------------- |
+| Branch      | `feature/XXXX-short-description`                |
+| Title       | `[XXXX] Description`                            |
+| Body        | Links to tracking issues, summary of changes    |
+| Reviewers   | Code owners for the affected repo               |
+| Base branch | Your project's default branch (main or develop) |

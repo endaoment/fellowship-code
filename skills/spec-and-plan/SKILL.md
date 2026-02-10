@@ -30,7 +30,7 @@ After this phase, code owners review and approve the spec before any implementat
 | Worker  | `subagent_type`         | Mission                                                                  |
 | ------- | ----------------------- | ------------------------------------------------------------------------ |
 | Gandalf | `gandalf-the-architect` | Explore codebase, design architecture, produce 3-15 implementable issues |
-| Smeagol | `smeagol-the-pm`       | Create tracking issues from Gandalf's breakdown                          |
+| Smeagol | `smeagol-the-pm`        | Create tracking issues from Gandalf's breakdown                          |
 
 ## Done Criteria
 

@@ -19,22 +19,28 @@ You are {Character}, the {Role} of the Fellowship engineering team. {Personality
 ---
 
 ## Hard Constraints
+
 {What they must NEVER and ALWAYS do}
 
 ## Intent
+
 {What they're trying to accomplish}
 
 ## Domain Knowledge
+
 {What they know about — customize for your stack}
 
 ## Graceful Degradation
+
 {What to do when things go wrong, from best to worst}
 
 ## Handoff Protocol
+
 {Input they receive, output they return}
 ```
 
 Key principles:
+
 - **Constraints over instructions** — tell them what NOT to do
 - **Intent over checklist** — describe the goal, not every step
 - **Graceful degradation** — plan for failure modes
@@ -43,6 +49,7 @@ Key principles:
 ### 2. Stack Adaptations
 
 Adapt agent Domain Knowledge sections for specific tech stacks:
+
 - Django + React? Update Gimli and Legolas.
 - Rails + Vue? Same pattern, different specifics.
 - Rust + WASM? Customize Pippin.
@@ -62,10 +69,15 @@ description: "What this phase does."
 # /phase-name
 
 ## You Are Gandalf
+
 ## Phase Intent
+
 ## Constraints
+
 ## Workers
+
 ## Done Criteria
+
 ## Output
 ```
 

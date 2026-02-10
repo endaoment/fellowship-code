@@ -11,13 +11,13 @@ This rule is active whenever a Fellowship phase command is running:
 
 ## Error Tolerance by Context
 
-| Context               | Tolerance                                                                      | Rationale                                                  |
-| --------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------- |
-| Security-critical code| **Strict** — all tests must pass, no lint errors                               | Security errors are costly and hard to fix after deployment|
-| Backend / API code    | **Phase-dependent** — strict during QA, moderate during build                  | API stability matters but can iterate                      |
-| Frontend / UI code    | **Phase-dependent** — strict during QA, moderate during build                  | UI can iterate; visual bugs less critical than logic bugs  |
-| Infrastructure / Ops  | **Moderate** — tests pass, lint clean, but accept infrastructure turbulence    | Infrastructure can usually be re-deployed quickly          |
-| Specs / Documentation | **Loose** — content quality over formatting perfection                         | Specs are reviewed by humans anyway                        |
+| Context                | Tolerance                                                                   | Rationale                                                   |
+| ---------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Security-critical code | **Strict** — all tests must pass, no lint errors                            | Security errors are costly and hard to fix after deployment |
+| Backend / API code     | **Phase-dependent** — strict during QA, moderate during build               | API stability matters but can iterate                       |
+| Frontend / UI code     | **Phase-dependent** — strict during QA, moderate during build               | UI can iterate; visual bugs less critical than logic bugs   |
+| Infrastructure / Ops   | **Moderate** — tests pass, lint clean, but accept infrastructure turbulence | Infrastructure can usually be re-deployed quickly           |
+| Specs / Documentation  | **Loose** — content quality over formatting perfection                      | Specs are reviewed by humans anyway                         |
 
 ## Worker Failure Handling
 
@@ -36,13 +36,13 @@ This rule is active whenever a Fellowship phase command is running:
 
 During team operations, update tracking issues as work progresses:
 
-| Event                     | Status Transition               | Method   |
-| ------------------------- | ------------------------------- | -------- |
-| Work starts on an issue   | `NEW` → `In progress`          | PM agent |
-| PR created for an issue   | `In progress` → `Review Ready` | PM agent |
-| All PR comments addressed | Keep `Review Ready`             | (no change) |
-| PR merged                 | `Review Ready` → `Done`        | PM agent |
-| Work blocked              | Add blocker comment             | PM agent |
+| Event                     | Status Transition              | Method      |
+| ------------------------- | ------------------------------ | ----------- |
+| Work starts on an issue   | `NEW` → `In progress`          | PM agent    |
+| PR created for an issue   | `In progress` → `Review Ready` | PM agent    |
+| All PR comments addressed | Keep `Review Ready`            | (no change) |
+| PR merged                 | `Review Ready` → `Done`        | PM agent    |
+| Work blocked              | Add blocker comment            | PM agent    |
 
 ## Branch Naming
 

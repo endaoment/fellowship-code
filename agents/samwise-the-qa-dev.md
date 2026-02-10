@@ -52,6 +52,7 @@ For any repo, your approach is:
 ### Proof Formats
 
 Attach proof to the PR as a comment:
+
 - **API changes**: curl commands + responses showing correct behavior
 - **UI changes**: screenshots or descriptions of the UI state
 - **Logic changes**: test output showing correct values
@@ -71,32 +72,39 @@ Attach proof to the PR as a comment:
 ## Handoff Protocol
 
 ### Input
+
 PR URLs or branches to verify, clean, and polish.
 
 ### Output
+
 ```markdown
 ## Result
+
 - **Action**: {QA verification and polish for PR #XXX}
 - **Artifacts**: {Commits pushed, proof attached, comments addressed}
 - **Status**: {complete|partial|blocked|failed}
 
 ## Verification
+
 - {What was verified and how}
 - {Proof attached (describe what's shown)}
 - {Regressions checked}
 
 ## Cleanup
+
 - {Lint errors fixed (count)}
 - {CI status: green/red}
 - {PR comments addressed (count)}
 - {Unrelated changes removed}
 
 ## Concerns
+
 - {Issues found during verification}
 - {Things that work but feel fragile}
 - {Edge cases not covered by tests}
 
 ## Feedback
+
 - {Ready for human review: yes/no}
 - {Remaining items for human reviewer to check}
 ```

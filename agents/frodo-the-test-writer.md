@@ -70,32 +70,39 @@ describe('{ISSUE-ID}: {Bug description}', () => {
 ## Handoff Protocol
 
 ### Input
+
 Testing task -- feature to cover, bug to reproduce, or test gap to fill.
 
 ### Output
+
 ```markdown
 ## Result
+
 - **Action**: {Tests written -- count and type}
 - **Artifacts**: {Test files created/modified, branch pushed}
 - **Status**: {complete|partial|blocked|failed}
 
 ## Test Coverage
+
 - {Number of test cases added}
 - {What scenarios are covered}
 - {What edge cases are tested}
 - {Test pass/fail status}
 
 ## Context
+
 - {Test approach (unit vs integration vs e2e)}
 - {Mocks used and why}
 - {Real values from bug reports used}
 
 ## Concerns
+
 - {Coverage gaps that remain}
 - {Flaky test risks}
 - {Missing test infrastructure}
 
 ## Feedback
+
 - {Areas that need more coverage}
 - {Tests that should be added but are blocked}
 ```

@@ -21,13 +21,13 @@ Character-to-role mapping, capabilities, and deployment guide for the Fellowship
 
 ## Future Fellowship Ideas
 
-| Character     | Possible Role        | Notes                             |
-| ------------- | -------------------- | --------------------------------- |
-| **Eowyn**     | Email/Comms Dev      | Fearless, breaks conventions      |
-| **Faramir**   | Release Engineer     | Noble, follows process faithfully |
-| **Galadriel** | Product Strategist   | Far-seeing, wise counsel          |
-| **Elrond**    | DevOps Architect     | Ancient wisdom, infrastructure    |
-| **Theoden**   | Project Coordinator  | Rallies the team, coordinates     |
+| Character     | Possible Role       | Notes                             |
+| ------------- | ------------------- | --------------------------------- |
+| **Eowyn**     | Email/Comms Dev     | Fearless, breaks conventions      |
+| **Faramir**   | Release Engineer    | Noble, follows process faithfully |
+| **Galadriel** | Product Strategist  | Far-seeing, wise counsel          |
+| **Elrond**    | DevOps Architect    | Ancient wisdom, infrastructure    |
+| **Theoden**   | Project Coordinator | Rallies the team, coordinates     |
 
 ---
 
@@ -35,18 +35,18 @@ Character-to-role mapping, capabilities, and deployment guide for the Fellowship
 
 Which workers participate in which phase:
 
-| Worker          | /spec-and-plan | /build-full-stack | /qa-and-polish | /code-review | /deploy-and-release |
-| --------------- | :------------: | :---------------: | :------------: | :----------: | :-----------------: |
-| Gandalf         |    Primary     |      Support      |       -        |   Support    |          -          |
-| Aragorn         |       -        |      Primary      |       -        |      -       |          -          |
-| Legolas         |       -        |     FE tasks      |       -        |      -       |          -          |
-| Gimli           |       -        |     BE tasks      |       -        |      -       |          -          |
-| Frodo           |       -        |       Tests       |     Tests      |      -       |          -          |
-| Samwise         |       -        |         -         |    Primary     |      -       |          -          |
-| Merry           |       -        |     Ops tasks     |       -        |      -       |          -          |
-| Pippin          |       -        |  Domain tasks     |       -        |      -       |          -          |
-| Boromir         |       -        |         -         |    Reviews     |   Primary    |          -          |
-| Smeagol         |     Issues     |  Status updates   |       -        |      -       |      QA issues      |
+| Worker  | /spec-and-plan | /build-full-stack | /qa-and-polish | /code-review | /deploy-and-release |
+| ------- | :------------: | :---------------: | :------------: | :----------: | :-----------------: |
+| Gandalf |    Primary     |      Support      |       -        |   Support    |          -          |
+| Aragorn |       -        |      Primary      |       -        |      -       |          -          |
+| Legolas |       -        |     FE tasks      |       -        |      -       |          -          |
+| Gimli   |       -        |     BE tasks      |       -        |      -       |          -          |
+| Frodo   |       -        |       Tests       |     Tests      |      -       |          -          |
+| Samwise |       -        |         -         |    Primary     |      -       |          -          |
+| Merry   |       -        |     Ops tasks     |       -        |      -       |          -          |
+| Pippin  |       -        |   Domain tasks    |       -        |      -       |          -          |
+| Boromir |       -        |         -         |    Reviews     |   Primary    |          -          |
+| Smeagol |     Issues     |  Status updates   |       -        |      -       |      QA issues      |
 
 ---
 
