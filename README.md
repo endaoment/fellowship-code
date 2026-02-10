@@ -25,16 +25,94 @@ Each agent has a distinct personality, hard constraints, and graceful degradatio
 
 ## Quick Start
 
+### Step 1: Install
+
 ```bash
-# Clone into your project's rules repo (or any config directory)
+# Clone into your project root (or config directory)
 git clone https://github.com/endaoment/fellowship-code.git fellowship
 
 # Install -- creates symlinks into your claude/ directory
 cd fellowship
 ./setup.sh
+```
 
-# That's it. Open Cursor and try:
-# "Ask Gandalf to explore the codebase and describe the architecture."
+### Step 2: Calibrate the Team
+
+Open `SETUP_QUESTIONNAIRE.md`, fill in your answers, and paste the whole thing into Cursor. Gandalf reads your answers and customizes every agent to your project in one shot:
+
+```text
+/setup-fellowship
+
+## My Project
+**Project name**: Acme Platform
+**One-line description**: B2B SaaS for invoice automation
+
+## Repositories
+| Directory | Purpose    | Tech Stack                          |
+| --------- | ---------- | ----------------------------------- |
+| backend   | API server | Django 5.0, DRF, PostgreSQL         |
+| frontend  | Web app    | Next.js 14, React 19, Tailwind      |
+| infra     | IaC        | Terraform, AWS                      |
+
+## Commands
+**backend**:
+- Dev: python manage.py runserver
+- Test: python manage.py test
+- Lint: ruff check .
+
+**frontend**:
+- Dev: npm run dev
+- Test: npm run test
+- Lint: npm run lint
+
+## Git Workflow
+- Default branch: main
+- Feature branch format: feature/PROJ-123-description
+- PR title format: [PROJ-123] Description
+
+## Project Management
+- Tool: Linear
+- Issue ID format: PROJ-123
+- Status flow: To Do → In Progress → In Review → Done
+
+## Architecture Highlights
+- Auth: JWT via Auth0
+- Database: PostgreSQL with Prisma
+- API style: REST
+- Key conventions: All money in cents (integers)
+
+## Domain Specialist (Pippin)
+- Domain: none
+
+## CI/CD & Infrastructure
+- CI: GitHub Actions
+- Cloud: AWS
+- Deploy: Terraform + ECS
+
+## Team Conventions
+- Review: 1 approval required
+- Sensitive: Never auto-modify migrations
+```
+
+Gandalf will:
+- Generate your `CLAUDE.md` (the project bible every agent reads)
+- Customize each agent's Domain Knowledge for your stack
+- Update the roster with correct repo assignments
+- Set your branch naming and PR conventions
+
+**That's it. The Fellowship knows your project now.**
+
+### Step 3: Try It
+
+```text
+Ask Gandalf to explore the backend codebase and describe the architecture.
+```
+
+Or rally the full team:
+
+```text
+/spec-and-plan Add a webhook system that lets customers subscribe to
+invoice status change events with retry logic and a management UI.
 ```
 
 To remove:
@@ -94,6 +172,7 @@ Phase commands are how you rally the Fellowship for a quest. Each phase focuses 
 
 | Command               | The Quest                          | Who Rides Out                                 |
 | --------------------- | ---------------------------------- | --------------------------------------------- |
+| `/setup-fellowship`   | Calibrate the team to your project | Gandalf (reads your questionnaire)            |
 | `/spec-and-plan`      | Scout the terrain and draw the map | Gandalf, Smeagol                              |
 | `/build-full-stack`   | Build it across the realms         | Aragorn, Legolas, Gimli, Pippin, Merry, Frodo |
 | `/qa-and-polish`      | Verify the work holds up           | Samwise, Frodo, Boromir                       |
@@ -137,43 +216,21 @@ can configure email and push notification settings per category.
 
 ## Customization
 
-The Fellowship is designed to be adapted to your project. Here's how:
+### The Easy Way: `/setup-fellowship`
 
-### 1. Customize Agent Domain Knowledge
+Fill out `SETUP_QUESTIONNAIRE.md` and paste it into Cursor. Gandalf calibrates the entire team in one prompt. This is the recommended path -- it updates every agent, generates your CLAUDE.md, and sets all conventions at once. See [Quick Start](#quick-start) above.
 
-Each agent file has a `## Domain Knowledge` section. Replace it with your project's specifics:
+### Manual Customization
 
-```markdown
-## Domain Knowledge
+If you prefer to customize by hand, or want to tweak after the initial setup:
 
-**Repo**: `my-backend` (Django monolith)
+**Agent Domain Knowledge** -- Each agent file has a `## Domain Knowledge` section. Edit it directly with your project's repos, frameworks, and commands.
 
-- **Framework**: Django 5.0 with DRF
-- **Database**: PostgreSQL with Django ORM
-- **Queue**: Celery with Redis
-- **Auth**: JWT via django-rest-framework-simplejwt
+**Add or Remove Agents** -- Don't need a domain specialist? Delete `pippin-the-specialist-dev.md`. Need a mobile dev? Create `eowyn-the-mobile-dev.md` following the same pattern. Update `docs/fellowship-roster.md`.
 
-### Commands
-\```bash
-python manage.py runserver    # Dev server
-python manage.py test         # Run tests
-ruff check .                  # Lint
-\```
-```
+**Swap Project Management** -- Smeagol wraps your PM tool. Point it at Jira, Linear, Notion, GitHub Issues, or anything else by updating `agents/smeagol-the-pm.md`.
 
-### 2. Add or Remove Agents
-
-Don't need a domain specialist? Remove `pippin-the-specialist-dev.md`. Need a mobile dev? Create `eowyn-the-mobile-dev.md` following the same pattern. Update the roster in `docs/fellowship-roster.md`.
-
-### 3. Swap Project Management
-
-Smeagol wraps your PM tool. Out of the box, Smeagol is generic. Point it at your project management system (Jira, Linear, Notion, GitHub Issues) by updating the agent file.
-
-### 4. Bring Your Own Tech Stack
-
-The agents are stack-agnostic in the open-source version. Add your specific frameworks, conventions, and commands to each agent's Domain Knowledge section.
-
-See `examples/example-claude-md.md` for a complete integration example.
+See `examples/example-claude-md.md` for a complete manual integration example.
 
 ## Selective Installation
 
@@ -203,6 +260,7 @@ From the [Cursor research](https://cursor.com/blog/self-driving-codebases) and o
 ```
 fellowship-code/
 ├── README.md                  # You are here
+├── SETUP_QUESTIONNAIRE.md     # Fill this out, paste to Gandalf
 ├── setup.sh                   # Install the Fellowship
 ├── uninstall.sh               # Clean removal
 ├── LICENSE                    # MIT
@@ -230,6 +288,7 @@ fellowship-code/
 │   └── team-operations.md
 │
 ├── skills/                    # Phase command skills
+│   ├── setup-fellowship/SKILL.md   ← run this first
 │   ├── spec-and-plan/SKILL.md
 │   ├── build-full-stack/SKILL.md
 │   ├── qa-and-polish/SKILL.md

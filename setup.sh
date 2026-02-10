@@ -167,6 +167,7 @@ AGENT_FILES=(
 )
 
 SKILL_DIRS=(
+    "setup-fellowship"
     "spec-and-plan"
     "build-full-stack"
     "qa-and-polish"
@@ -327,6 +328,7 @@ fi
 if [[ "$INSTALL_SKILLS" == true ]]; then
     echo ""
     echo -e "${BOLD}Available commands:${NC}"
+    echo "  /setup-fellowship      Calibrate the team to your project (run this first!)"
     echo "  /spec-and-plan         Specify and plan a feature"
     echo "  /build-full-stack      Implement across repos"
     echo "  /qa-and-polish         QA verification and polish"
