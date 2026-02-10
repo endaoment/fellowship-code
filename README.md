@@ -1,6 +1,6 @@
 # The Fellowship of the Code
 
-> **It fellowships your code.** Get it?
+> **It fellow*ships*&nbsp;your code.** Get it?
 
 An open-source multi-agent AI engineering team for [Cursor](https://cursor.com), built on [Cursor's self-driving codebases research](https://cursor.com/blog/self-driving-codebases). Each agent is a character from Tolkien's Fellowship of the Ring, with a clear role, personality, and domain expertise -- all working together to take your codebase from idea to production.
 
@@ -19,7 +19,7 @@ Fellowship Code is a **plug-and-play multi-agent system** for AI-assisted softwa
 - **QA** and polish PRs until they're merge-ready
 - **Deploy** to production
 
-Each agent has a distinct personality, hard constraints, and graceful degradation -- so they know what to do when things go right *and* when things go wrong.
+Each agent has a distinct personality, hard constraints, and graceful degradation -- so they know what to do when things go right _and_ when things go wrong.
 
 ## Quick Start
 
@@ -50,12 +50,12 @@ You can also point Gandalf at a specific directory:
 
 Gandalf will come back with something like:
 
-> *I've explored your codebase. Here's what I found:*
-> *backend/ — Django 5.0, DRF, PostgreSQL. Commands: manage.py runserver, test, ruff.*
-> *frontend/ — Next.js 14, React, Tailwind. Commands: npm run dev, test, lint.*
-> *CI via GitHub Actions. Default branch: main.*
+> _I've explored your codebase. Here's what I found:_
+> _backend/ — Django 5.0, DRF, PostgreSQL. Commands: manage.py runserver, test, ruff._
+> _frontend/ — Next.js 14, React, Tailwind. Commands: npm run dev, test, lint._
+> _CI via GitHub Actions. Default branch: main._
 >
-> *Here's what I couldn't determine: What's your branch naming convention? What PM tool do you use? Any areas I should never auto-modify?*
+> _Here's what I couldn't determine: What's your branch naming convention? What PM tool do you use? Any areas I should never auto-modify?_
 
 Answer the follow-ups, and Gandalf calibrates:
 
@@ -174,11 +174,11 @@ can configure email and push notification settings per category.
 
 | Situation                       | Do this                                |
 | ------------------------------- | -------------------------------------- |
-| 1 repo, < 1 hour of work       | Send one member (e.g., Gimli, Legolas) |
-| 2+ repos or 3+ members needed  | Rally with a phase command             |
+| 1 repo, < 1 hour of work        | Send one member (e.g., Gimli, Legolas) |
+| 2+ repos or 3+ members needed   | Rally with a phase command             |
 | Need architecture before coding | Send Gandalf, or `/spec-and-plan`      |
-| PRs exist, need QA + cleanup   | `/qa-and-polish`                       |
-| Quick single-PR review         | Send Boromir directly                  |
+| PRs exist, need QA + cleanup    | `/qa-and-polish`                       |
+| Quick single-PR review          | Send Boromir directly                  |
 
 ## Customization
 
@@ -278,8 +278,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). We welcome new agents, improved phase co
 ## Credits
 
 Inspired by:
+
 - [Cursor's self-driving codebases](https://cursor.com/blog/self-driving-codebases) research
-- J.R.R. Tolkien's *The Lord of the Rings*, obviously
+- J.R.R. Tolkien's _The Lord of the Rings_, obviously
 - Every engineering team that wishes they had 10 tireless colleagues
 
 ## License
@@ -288,4 +289,4 @@ MIT -- see [LICENSE](LICENSE).
 
 ---
 
-*One does not simply ship code without the Fellowship of the Ring.*
+_One does not simply ship code without the Fellowship of the Code._
